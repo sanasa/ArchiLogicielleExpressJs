@@ -1,0 +1,28 @@
+extends layout
+block movies 
+  h2 List of availabe movies :
+  .container
+    table(class="table table-striped")
+      thead
+        tr
+          th Id
+          th Title
+          th Year
+          th 
+          th
+        tbody
+          each key in json
+            tr
+              th !{key.id}
+              th !{key.title}
+              th !{key.year} 
+              th 
+                button.btn.btn-danger.col-xs-12(class="deleteButton",data-key="#{key.id}") X
+              //- th
+              //-   button(type="button",class="btn btn-primary",data-key="#{key.id}" ) Update the movie
+               
+
+
+
+
+  

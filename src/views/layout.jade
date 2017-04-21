@@ -1,0 +1,32 @@
+doctype html
+html
+  head  
+    title MOVIES LAND  
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/styles.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/ajaxDeleteCall.js')
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" ,crossorigin="anonymous")
+    script(src='js/popup.js')
+  body
+    h1 Hello movies Lovers ! 
+    br
+    .col-md-6
+    .col-md-6
+      block movies
+      br
+      br
+      h2 Add a movie here :
+      br
+      form(action="movies",method="post")
+        .form-group
+          label Id of the movie
+          input(type="number",placeholder="Id",name="id",class="form-control",required)
+        .form-group
+          label Name of the movie
+          input(type="text",placeholder="Title",name="title",class="form-control",required)
+        .form-group
+          label Year of the movie
+          input(type="number",name="year",class="form-control",placeholder="Year",required)
+        button(type="submit",class="btn btn-default") Add the movie

@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
-var mongoUrl = process.env.MONGOLAB_URI;
-var url="mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
+var mongoUrl = process.env.MONGOLAB_URI || "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
 
 module.exports = function(app) {
   mongoose.Promise = global.Promise;
-  mongoose.connect(url, {
+  mongoose.connect(mongoUrl, {
     mongoose: {
       safe: true
     }

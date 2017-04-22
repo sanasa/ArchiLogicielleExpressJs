@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 //var mongoUrl = "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
-var mongoUrl =process.env.MONGO_URL ||'mongodb://sana:sana@127.0.0.1:27017/movies';
-
+//var mongoUrl =process.env.MONGO_URL ||'mongodb://sana:sana@127.0.0.1:27017/movies';
+//mongodb://<user>:<pass>@mongo.onmodulus.net:27017/uw15dfpu
+var mongoUrl =process.env.MONGO_URL || 'mongodb://localhost/movies';
 module.exports = function(app) {
   mongoose.Promise = global.Promise;
   mongoose.connect(mongoUrl, {

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var mongoUrl = process.env.MONGOLAB_URI || "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
+var mongoUrl = "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
 
 module.exports = function(app) {
   mongoose.Promise = global.Promise;

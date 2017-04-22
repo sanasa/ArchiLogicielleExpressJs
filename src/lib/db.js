@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var mongoUrl = "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
+//var mongoUrl = "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
+var mongoUrl = 'mongodb://sana:sana@mongo.onmodulus.net:27017/movies';
 
 module.exports = function(app) {
   mongoose.Promise = global.Promise;

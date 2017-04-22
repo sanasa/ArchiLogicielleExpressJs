@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 //var mongoUrl = "mongodb://sana:Allah7akbar@ds115071.mlab.com:15071/movies";
-var mongoUrl ='mongodb://localhost:27017/movies';
+var mongoUrl ='mongodb://sana:sana@localhost:27017/movies';
 
 module.exports = function(app) {
   mongoose.Promise = global.Promise;

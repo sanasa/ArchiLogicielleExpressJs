@@ -7,8 +7,8 @@ module.exports = {
     Movie.find(function (err, movies) {
       console.log("get all movies");
       if (err) return res.status(400).json(err);
-      res.render("movies", { json: movies });
-      //  res.status(201).json(movies);
+     // res.render("movies", { json: movies });
+     return  res.status(201).json(movies);
 
     });
   },
@@ -21,8 +21,8 @@ module.exports = {
     Movie.create(req.body, function (err, movie) {
 
       if (err) return res.status(400).json(err);
-      res.redirect("movies");
-    //  res.status(201).json(movie);
+     // res.redirect("movies");
+     res.status(201).json(movie);
     });
   },
 

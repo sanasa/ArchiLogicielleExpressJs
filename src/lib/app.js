@@ -3,7 +3,7 @@ var app = express();
 
 require('./db')(app);
 require('./parser')(app);
-
+  
 var actors = require('../routes/actors');
 var movies = require('../routes/movies');
 
@@ -17,7 +17,7 @@ app.get("/", function (req, res) {
     res.render('index');
 
 })
-
+     
 // Actors routes
 app.route('/actors').get(actors.getAll).post(actors.createOne);
 

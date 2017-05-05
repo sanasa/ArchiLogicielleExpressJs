@@ -7,23 +7,30 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -b",
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
-    "pre start": "npm run jshint",
-    "start": "mongod & node app.js"    
+    "test":"gulp test",
+    "start": "gulp & mongod & node app.js"
   },
   "author": "sana",
   "homepage": "https://github.com/sanasa/ExpressJsTp3",
   "dependencies": {
+    "body-parser": "^1.5.2",
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
     "express": "^4.7.2",
     "mongodb": "^2.1.16",
     "mongoose": "^4.4.12",
-    "body-parser": "^1.5.2"
+    "request": "^2.81.0"
   },
   "devDependencies": {
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-jslint": "^1.0.10",
+    "gulp-mocha": "^4.3.1",
     "jade": "^1.11.0",
     "jshint": "^2.9.4",
-    "mocha": "^1.21.3",
+    "jshint-stylish": "^2.2.1",
+    "mocha": "^1.21.5",
     "should": "^4.0.4",
     "supertest": "^0.13.0"
   }
